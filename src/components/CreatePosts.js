@@ -4,7 +4,7 @@ import CKEditor from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import sanitizeHtml from "sanitize-html";
 
-const baseURL = process.env.REACT_APP_BASEURL || "https://noor-website.herokuapp.com";
+const baseURL = process.env.REACT_APP_BASEURL || "https://danny-mern-stack.herokuapp.com";
 
 class CreatePosts extends Component {
     constructor() {
@@ -13,7 +13,7 @@ class CreatePosts extends Component {
         this.state = {
             title: "",
             body: "",
-            author: "Noor",
+            author: "Danny",
             date: new Date(),
             isLoggedIn: true,
         };
