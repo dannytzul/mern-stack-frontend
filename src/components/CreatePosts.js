@@ -4,7 +4,7 @@ import CKEditor from "@ckeditor/ckeditor5-react";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import sanitizeHtml from "sanitize-html";
 
-const baseURL = process.env.REACT_APP_BASEURL || "http://localhost:5000";
+const baseURL = process.env.REACT_APP_BASEURL || "https://noor-website.herokuapp.com";
 
 class CreatePosts extends Component {
     constructor() {
@@ -13,9 +13,9 @@ class CreatePosts extends Component {
         this.state = {
             title: "",
             body: "",
-            author: "",
+            author: "Noor",
             date: new Date(),
-            isLoggedIn: false,
+            isLoggedIn: true,
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -24,14 +24,6 @@ class CreatePosts extends Component {
     }
 
     // Set author name from logged in user's profile
-    componentDidMount() {
-        if (sessionStorage.getItem("isLoggedIn") === "true") {
-            this.setState({
-                author: sessionStorage.getItem("username"),
-                isLoggedIn: true,
-            });
-        }
-    }
 
     handleEditorChange(event, editor) {
         const data = editor.getData();

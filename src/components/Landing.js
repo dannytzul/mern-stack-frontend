@@ -7,14 +7,14 @@ const Landing = () => (
             Just Blog It<span className="full-stop">.</span>
         </h1>
         <main>
-            This is a blogging platform for all your blogging needs!
+            Welcome to a blogging platform for all your blogging needs!
             <br />
-            Want to read some awesome blogs? We've got you covered!
-            <br /> Want to write an awesome blog post?
-            <br /> Rest assured, because we've got you covered once again!
+            Want to read some amazing blogs? We've got you covered!
+            <br /> Want to write a great blog post?
+            <br /> Rest assured, because, like StateFarm, we've got you covered !
         </main>
         <hr className="my-4 gold-hr" />
-        <p>So, click below and dive right in!</p>
+        <p>So, click below and begin your writing adventures!</p>
         <Link
             className="btn btn-outline-primary btn-lg"
             to="/posts"

@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import HOC from "./components/HOC"
 
 //Import style
 import "./stylesheets/index.css";
@@ -8,7 +9,6 @@ import "./stylesheets/index.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 const Landing = lazy(() => import("./components/Landing"));
-const Post = lazy(() => import("./components/Post"));
 const CreatePost = lazy(() => import("./components/CreatePosts"));
 const EditPost = lazy(() => import("./components/EditPost"));
 const PostsList = lazy(() => import("./components/PostsList"));
@@ -29,13 +29,13 @@ const App = () => (
             <Navbar />
             <Suspense fallback={renderLoader()}>
                 <Routes>
-                    <Route path="/" exact component={Landing} />
-                    <Route path="/posts" exact component={PostsList} />
-                    <Route path="/posts/new/" exact component={CreatePost} />
-                    <Route path="/posts/:id" exact component={Post} />
-                    <Route path="/posts/:id/edit" exact component={EditPost} />
-                    <Route path="/login" component={Login} />
-                    <Route path="/about" component={About} />
+                    <Route path="/" element={<Landing />} />
+                    <Route path="/posts" element={<PostsList />} />
+                    <Route path="/posts/new/" element={<CreatePost />} />
+                    <Route path="/posts/:id" element={<HOC />} />
+                    <Route path="/posts/:id/edit" element={<EditPost />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/about" element={<About />} />
                 </Routes>
             </Suspense>
             <Footer />

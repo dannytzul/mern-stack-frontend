@@ -7,7 +7,7 @@ import PropTypes from "prop-types";
 const CommentList = lazy(() => import("./CommentList"));
 
 // The same post component is used in the Postslist component and to SHOW the individual post component
-const baseURL = process.env.REACT_APP_BASEURL || "http://localhost:5000";
+const baseURL = process.env.REACT_APP_BASEURL || "https://noor-website.herokuapp.com";
 const RenderLoader = () => (
     <div className="spinner-container">
         <div className="spinner-border" role="status">
@@ -30,21 +30,21 @@ class Post extends Component {
         // If this component is rendered to SHOW individual Post component, make an API call to get that individual post
         if (!this.props.post) {
             axios
-                .get(`${baseURL}/server/posts/${this.props.match.params.id}`)
+                .get(`${baseURL}/server/posts/${this.props.id.id}`)
                 .then((response) => {
                     this.setState({ post: response.data });
                     // Set the reading time for the post
-                    if (this.state.post) {
-                        const wordsPerMinute = 200; //average rate;
-                        const noOfWords = this.state.post.body.split(" ")
-                            .length;
-                        if (noOfWords) {
-                            const readingTime = Math.floor(
-                                noOfWords / wordsPerMinute
-                            );
-                            this.setState({ readingTime: readingTime });
-                        }
-                    }
+                    //if (this.state.post) {
+                        //const wordsPerMinute = 200; //average rate;
+                        //const noOfWords = this.state.post.body.split(" ")
+                            //.length;
+                        //if (noOfWords) {
+                            //const readingTime = Math.floor(
+                                //noOfWords / wordsPerMinute
+                            //);
+                            //this.setState({ readingTime: readingTime });
+                        //}
+                    //}
 
                     // Remove display of loader
                     document.querySelector(".spinner-border").style.display =

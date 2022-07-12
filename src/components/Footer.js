@@ -2,26 +2,26 @@ import React from "react";
 
 const Footer = () => (
     <footer>
-        Created by <span id="rajat">Rajat</span>
+        Created by <span id="Noor">Noor</span>
         <br />
         <span>
             <i
                 className="fab fa-github"
                 onClick={() =>
-                    window.open("https://github.com/Rajatm544", "_blank")
+                    window.open("https://github.com/noor-s-hassan", "_blank")
                 }
             ></i>{" "}
             <i
                 className="fab fa-hackerrank"
                 onClick={() =>
-                    window.open("https://www.hackerrank.com/Rajat_M", "_blank")
+                    window.open("https://www.hackerrank.com/nhass", "_blank")
                 }
             ></i>{" "}
             <i
                 className="fab fa-linkedin"
                 onClick={() =>
                     window.open(
-                        "https://www.linkedin.com/in/rajat--m",
+                        "https://www.linkedin.com/in/linkwithnoor/",
                         "_blank"
                     )
                 }
@@ -30,7 +30,7 @@ const Footer = () => (
                 className="fab fa-stack-overflow"
                 onClick={() =>
                     window.open(
-                        "https://stackoverflow.com/users/13040278/rajat-m",
+                        "https://stackoverflow.com/users/19505464/n-hassan",
                         "_blank"
                     )
                 }
@@ -38,7 +38,7 @@ const Footer = () => (
             <i
                 className="fab fa-twitter"
                 onClick={() =>
-                    window.open("https://twitter.com/Rajat__m", "_blank")
+                    window.open("https://twitter.com/NoorSaiedHassa1", "_blank")
                 }
             ></i>
         </span>

@@ -8,18 +8,19 @@ const About = () => {
             </h1>
             <main>
                 <p>
-                    This is an installable Blogging app that lets a user delve
+                    This is a Blogging source that lets a user delve
                     into a topic of choice and write a blog post, or read one of
                     the already uploaded Blog posts.
                 </p>
                 <p>
                     In order to write your very own Blog post, you can
-                    conveniently login using one of your social accounts, and
-                    start penning your thoughts!
+                    login using one of your social accounts, and
+                    start sharing your thoughts!
                 </p>
                 <p>
-                    You can edit your Blog post at any time, as long as you're
-                    logged in. If you ever feel like your post is no longer a
+                    Wrote something you want to change? 
+                    No worries, you can edit your Blog post at any time!
+                    If you ever feel like your post is no longer a
                     valid representation of your thoughts, you can also delete
                     it at any instant of time.
                 </p>
